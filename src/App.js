@@ -1,8 +1,11 @@
 import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import Cards from "./Components/Cards/Cards";
-import { useState } from "react";
+import About from "./Components/About/About";
+import Detail from "./Components/Detail/Detail";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -21,7 +24,7 @@ function App() {
 
   const onClose = (id) => {
     const charactersFiltered = characters.filter(
-      (character) => character.id !== Number.id
+      (character) => character.id !== parseInt(id)
     );
     setCharacters(charactersFiltered);
   };
@@ -29,7 +32,14 @@ function App() {
   return (
     <div className="App">
       <Nav onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClose} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
     </div>
   );
 }
