@@ -14,7 +14,7 @@ const validation = (userData) => {
   }
 
   if (!/\d/.test(userData.password)) {
-    errors.password = "Password must have at least an number";
+    errors.password = "Password must have at least 1 number";
   }
 
   if (userData.password.length < 6 || userData.password.length > 10) {

@@ -38,7 +38,7 @@ const Form = ({ login }) => {
             <input type="password" name="password" value={userData.password} onChange={handleChange} />
             {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
             <hr />
-            <button disabled={!userData.email || !userData.password || errors.email || errors.password}>Submit</button>
+            <button disabled={!userData.email || !userData.password || errors.email || errors.password}>Log In</button>
 
         </form >
     )

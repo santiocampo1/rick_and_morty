@@ -4,6 +4,7 @@ import Nav from "./Components/Nav/Nav";
 import Cards from "./Components/Cards/Cards";
 import About from "./Components/About/About";
 import Detail from "./Components/Detail/Detail";
+import Favorites from "./Components/Favorites/Favorites";
 import axios from "axios";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -28,7 +29,6 @@ function App() {
   };
 
   const location = useLocation();
-  console.log(location);
 
   const onSearch = (id) => {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(
@@ -61,6 +61,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );
