@@ -8,7 +8,7 @@
 * Redux
 * Node
 
-> **How Does it Works?**
+> **How Does it Work?**
 * First, you must log in in my app. As default email and password, the following is established: 
 1. email: sanntiocampo@gmail.com
 2. password: fullstack1
