@@ -1,23 +1,24 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import axios from "axios"
 
-const Detail = (props) => {
+const Detail = () => {
 
     const { id } = useParams()
     const [character, setCharacter] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:3001/rickandmorty/character/${id}`)
-            .then((response) => response.json())
-            .then(({ char }) => {
-                if (char.name) {
-                    setCharacter(char);
+        axios(`http://localhost:3001/rickandmorty/character/${id}`)
+            .then((response) => response.data)
+            .then((data) => {
+                if (data.name) {
+                    setCharacter(data);
                 } else {
                     window.alert('No hay personajes con ese ID');
                 }
             })
-            .catch((err) => {
-                window.alert("No hay personajes con ese ID")
+            .catch((error) => {
+                window.alert(error)
             })
         return setCharacter({});
     }, [id]);
