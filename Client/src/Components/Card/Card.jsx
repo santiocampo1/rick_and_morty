@@ -19,7 +19,7 @@ const Card = ({ id, name, status, species, gender, origin, image, onClose, addFa
 
     useEffect(() => {
         myFavorites.forEach((fav) => {
-            if (fav.id === id) {
+            if (fav.id === +id) {
                 setIsFav(true);
             }
         });
@@ -35,7 +35,7 @@ const Card = ({ id, name, status, species, gender, origin, image, onClose, addFa
                 )
             }
             <button onClick={() => onClose(id)}>x</button>
-            <Link to={`/detail/:${id}`} >
+            <Link to={`/detail/${id}`} >
                 <h1>{name}</h1>
             </Link>
             <h3>{status}</h3>

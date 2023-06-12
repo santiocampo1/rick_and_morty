@@ -25,12 +25,12 @@ const Detail = () => {
 
     return (
         <div>
-            <img src={character.image} alt={character.name} />
-            <h3>Name: "{character.name}"</h3>
-            <h3>Status: "{character.status}"</h3>
-            <h3>Species "{character.species}"</h3>
-            <h3>Gender: "{character.gender}"</h3>
-            <h3>Origin: "{character.origin?.name}"</h3>
+            <img src={character?.image} alt={character?.name} />
+            <h3>Name: "{character?.name}"</h3>
+            <h3>Status: "{character?.status}"</h3>
+            <h3>Species "{character?.species}"</h3>
+            <h3>Gender: "{character?.gender}"</h3>
+            <h3>Origin: "{character?.origin?.name}"</h3>
         </div>
     )
 }

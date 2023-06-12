@@ -21,7 +21,10 @@ export const reducer = (state = initialState, { type, payload }) => {
       );
       return {
         ...state,
-        myFavorites: allCharactersFiltered,
+        myFavorites:
+          payload === "allCharacters"
+            ? [...state.allCharactersFav]
+            : allCharactersFiltered,
       };
 
     case ORDER:

@@ -13,7 +13,7 @@ const Favorites = ({ myFavorites }) => {
 
     const handleOrder = (event) => {
         dispatch(orderCards(event.target.value))
-        setAux(!aux)
+        setAux(true)
     }
 
     const handleFilter = (event) => {
@@ -28,15 +28,16 @@ const Favorites = ({ myFavorites }) => {
             </select>
 
             <select onChange={handleFilter}>
-                <option name="Male" id="">Male</option>
-                <option name="Female" id="">Female</option>
-                <option name="Genderless" id="">Genderless</option>
-                <option name="unknown" id="">Unknown</option>
+                <option value="Male" >Male</option>
+                <option value="Female" >Female</option>
+                <option value="Genderless" >Genderless</option>
+                <option value="unknown" >Unknown</option>
+                <option value="allCharacters">All Characters</option>
             </select>
 
 
             {
-                myFavorites?.map((fav) => {
+                myFavorites?.map(fav => {
                     return (
                         <Card
                             key={fav.id}
