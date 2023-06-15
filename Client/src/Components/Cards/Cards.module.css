@@ -1,0 +1,13 @@
+.container {
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  background-color: black; /* Establece el fondo negro */
+  padding: 20px; /* Agrega espacio interno al contenedor */
+}
+
+.card {
+  background-color: #333; /* Establece un color agradable para las tarjetas */
+  color: white; /* Cambia el color del texto en las tarjetas */
+  padding: 10px; /* Agrega espacio interno a las tarjetas */
+  margin-bottom: 10px; /* Agrega espacio entre las tarjetas */
+}
