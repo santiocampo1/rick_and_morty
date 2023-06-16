@@ -7,6 +7,9 @@
 * React
 * Redux
 * Node
+* Express
+* PostgreSQL
+* Sequelize
 
 > **How Does it Work?**
 * First, you must log in in my app. As default email and password, the following is established: 
